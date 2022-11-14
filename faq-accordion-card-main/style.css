@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: blue;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 930px;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 25px;
+}
+
+/* image css */
+.image_wrapper{
+  position: relative;
+  padding: 50px 0;
+  z-index: 0;
+}
+.inside_image_wrapper{
+  overflow: hidden;
+}
+.image_women img{
+  position: relative;
+  left: -80px;
+}
+#img_des{
+  display: block;
+}
+#img_mob{
+  display: none;
+}
+.image_pattern img{
+  position: absolute;
+  top: -280px;
+  left: -300px;
+  /* z-index: -1; */
+  width: 600px;
+  height: 930px;
+}
+#patt_desk{
+  display: block;
+}
+#patt_mob{
+  display: none;
+}
+/* image_box */
+.image_box img{
+  position: absolute;
+  top:190px;
+  left: -120px;
+}
+
+/* FAQ container */
+.accordion_wrapper{
+  margin: 50px;
+}
+.accordion_wrapper h1{
+  color: hsl(238, 29%, 16%);
+  font-size: 28px;
+  padding-bottom: 20px;
+}
+.accordion_wrapper>div{
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+.accordion_wrapper span {
+  float: right;
+  transition: 0.4s;
+}
+.queries_question{
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 15px 15px 15px 0;
+  color: hsl(273, 75%, 66%);
+  transition: 0.2s;
+}
+.queries_question:hover {
+  color: hsl(14, 88%, 65%);
+}
+.queries_answer{
+  color: hsl(240, 6%, 50%);
+  font-size: 14px;
+  overflow: hidden;
+  height: 0;
+  transition: 0.3s ease-out;
+}
+.active {
+  height: 50px;
+}
+.active {
+  transform: rotate(180deg);
+  transition: 0.4s;
+} 
+
+
+
+/* Mobile version */
+
+@media (max-width: 890px) {
+  .container {
+    max-width: 450px;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 120px;
+  }
+  .image_wrapper{
+    padding: 0;
+    margin: 0 auto;
+  }
+  .inside_image_wrapper{
+    overflow: visible;
+  }
+  .image_box img{
+    display: none;
+  }
+  #patt_desk{
+    display: none;
+  }
+  #patt_mob{
+    display: block;
+  }
+  #img_des{
+    display: none;
+  }
+  #img_mob {
+    display: block;
+  }
+  .image_women img{
+    position: relative;
+    left: 0;
+    top: -120px;
+   height: 200px;
+   width: 300px;
+  }
+  .image_pattern img{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    /* z-index: -1; */
+    height: 130px;
+    width: 300px;
+  }
+  .accordion_wrapper{
+   margin-top: 0;
+  }
+  .accordion_wrapper h1{
+    text-align: center;
+  }
+}
